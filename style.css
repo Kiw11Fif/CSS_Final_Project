@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    height: 150px;
+    background: linear-gradient(90deg, #43C6AC 0%, #191654 100%);
+}
+
+header h1{
+    margin: 0;
+    font-size: 1.25em !important;
+    font-weight: 700;
+    margin: 0;
+    width: 90%;
+    display: block;
+    position: relative;
+    line-height: 2em;
+    top: 20px;
+    left: 20px;
+    color: white;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+}
+header h2{
+    margin: 0;
+    font-size: 1em !important;
+    font-weight: 400;
+    font-style: italic;
+    display: inline-block;
+    box-sizing: border-box;
+    position: relative;
+    top: 20px;
+    left: 180px;
+    color: white;
+}
+
+#university{
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    top: 35px;
+    right: 10px;
+    justify-content: right;
+}
+
+#university p{
+    display: inline-block;
+    color: rgb(255, 151, 24);
+    margin: 0px 10px 10px 0px;
+}
+#university img{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: white 2px solid;
+    /* position: relative;
+    top: 40px;
+    left: 85%; */
+}
+
+nav {
+    background: linear-gradient(90deg, #43C6AC, #191654);
+}
+
+.navbar{
+    display: flex;
+    margin: auto;
+    max-width: 1200px;
+}
+
+
+.nav-items {
+    font-size: 1rem;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+    transition-duration: 0.3s;
+    line-height: 3em;
+}
+
+.nav-items:hover {
+    background-color: white;
+    opacity: 0.5;
+    color: #39a38e;
+}
+
+.current {
+    background-color: white;
+    opacity: 0.5;
+    font-weight: bolder;
+    color: #39a38e;
+}
+
+figure {
+    margin: auto;
+    min-width: 300px;
+    width: 100%;
+}
+
+img {
+    width: 100%;
+    padding: 3px;
+    border: 1px solid purple;
+    border-radius: 5px;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+main h1 {
+    font-size: 1.5rem;
+}
+
+main h2 {
+    font-size: 1.4rem;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 2em;
+    text-align: justify;
+}
+
+#skip {
+    float: left;
+    line-height: 3rem;
+    margin: 0;
+    padding: 0 10px;
+    background-color: white;
+    font-weight: bold;
+    color: #39a38e;
+    position: absolute;
+    transform: translateY(-100%);
+}
+
+#skip:focus {
+    transform: translateY(0%);
+}
+
+#catalog{
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(170px, 450px));
+    grid-template-rows: repeat(2, minmax(0px, auto));
+    gap: 10px;
+    padding: 0;
+    list-style-type: none;
+    width: 100%;
+    max-width: 1200px;
+}
+
+
+
+.product-card{
+    padding: 10px;
+    display: block;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    min-height: 250px;
+    max-height: 1000px;
+    transition: ease-in-out;
+    border: 2px solid transparent;
+    transition-property: border;
+    transition-duration: 0.2s;
+}
+
+.product-card:hover{
+    border: 2px solid #39a38e;
+}
+
+.product-card a{
+    font-size: 1rem;
+    text-align: center;
+    display: block;
+    font-weight: 700;
+    color: black;
+}
+
+.product-card a:hover{
+    text-decoration: underline;
+}
+
+.product-name{
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.2em;
+    padding: 0;
+    margin: 0;
+}
+
+.spec-detail{
+    padding: 20px;
+    list-style-type: disc;
+    font-size: 0.8em;
+    line-height: 1.25rem;
+    text-align: left;
+}
+
+.product-img{
+    border: 1px solid transparent;
+}
+
+
+@media only screen and (max-width: 768px){
+    /* For Mobile: */
+    .spec-detail{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    /* For Desktop: */
+    .product-card{
+        min-height: 500px;
+        max-height: 1000px;
+    }
+    .product-card a{
+        font-size: 1.2rem;
+    }
+    #catalog{
+        grid-template-columns: repeat(4, minmax(250px, 300px));
+        grid-template-rows: repeat(auto, minmax(800px, auto));
+    }
+  }
+
+  #university{
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+    text-shadow: 1px 1px #303030;
+  }
